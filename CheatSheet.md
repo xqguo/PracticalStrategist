@@ -50,6 +50,14 @@ Some references for tools
     git push -f origin master
     ```
 
+## [Paket](https://fsprojects.github.io/Paket/)
+- Use paket to isntall/restore/update packages. [Get started](https://fsprojects.github.io/Paket/getting-started.html). 
+- to start from scratch if packages cannot be downloaded or installed properly, you can [clear cache](https://fsprojects.github.io/Paket/paket-clear-cache.html)
+
+```console
+.paket\paket.exe clear-cache
+```
+
 ## PowerShell
 
 - add user path entry and remove duplicates
