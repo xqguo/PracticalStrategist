@@ -24,7 +24,9 @@ Some references for tools
   ```bash
   ssh -i ~/.ssh/mykey user@host
   ```
+
 ## Git
+
 - Use submoduels to have nested git repositories. [ref](https://www.vogella.com/tutorials/GitSubmodules/article.html)
 
     ```console
@@ -51,7 +53,9 @@ Some references for tools
     ```
 
 ## [Paket](https://fsprojects.github.io/Paket/)
-- Use paket to isntall/restore/update packages. [Get started](https://fsprojects.github.io/Paket/getting-started.html). 
+
+- Use paket to isntall/restore/update packages. [Get started](https://fsprojects.github.io/Paket/getting-started.html).
+
 - to start from scratch if packages cannot be downloaded or installed properly, you can [clear cache](https://fsprojects.github.io/Paket/paket-clear-cache.html)
 
 ```console
@@ -107,8 +111,8 @@ gpg --edit-key my_id
 
 ## [Pass](https://www.passwordstore.org/)
 
-- copy pass to clipbard under wsl using clip.exe
+- copy pass to clipboard under wsl using clip.exe
 
-```concole
-pass some_entry | clip.exe 
+```console
+pass some_entry | clip.exe
 ```
