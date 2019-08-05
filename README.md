@@ -23,6 +23,8 @@ Understand the markets
 
 * CME
 * ICE
+    - [Brent future](https://www.theice.com/products/219/Brent-Crude-Futures) is a benchmark price for global oil. 
+    - [Brent Futures Option](https://www.theice.com/products/218/Brent-Crude-American-style-Option) is the option on the brent future.  
 * LME
 
 Understand the Quantitative finance
