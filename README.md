@@ -9,7 +9,7 @@ Programming setup
 * Learn FSharp basics.
 
 * Get a free environment
-  * Azure notebook https://notebooks.azure.com/
+  * [Azure notebook](https://notebooks.azure.com)
   * Install .net core SDK and a IDE or editor
     * VS Community for ease of use and windows environment
     * or Install VSCode for cross platform
