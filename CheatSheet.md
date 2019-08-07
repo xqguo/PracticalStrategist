@@ -52,6 +52,13 @@ Some references for tools
     git push -f origin master
     ```
 
+- Or Simply rebase the whole thing
+
+    ```console
+    git rebase -i --root
+    git push --force
+    ```
+
 ## [Paket](https://fsprojects.github.io/Paket/)
 
 - Use paket to isntall/restore/update packages. [Get started](https://fsprojects.github.io/Paket/getting-started.html).
