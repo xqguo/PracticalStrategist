@@ -22,6 +22,8 @@ Programming setup
 Understand the markets
 -----------------
 
+* [Intro to Money market](https://docs.google.com/presentation/d/e/2PACX-1vSBtq-1KcZtVHhFnpL0sCLaqKtg5m2FpPKly7bN6X6hPmg5T-Blxo3xD6PTeBFmQt1TJDlJ5x9pZXF0/pub?start=false&loop=false&delayms=3000)
+
 * CME
 * ICE
   * [Brent future](https://www.theice.com/products/219/Brent-Crude-Futures) is a benchmark price for global oil. 
