@@ -3,11 +3,9 @@ generate_load_scripts: true
 framework: auto-detect
 
 # net461 is used for F# Interactive scripting
-framework: net461
-source https://nuget.org/api/v2
+source https://api.nuget.org/v3/index.json
 
-
-nuget FSharp.Core 4.5.0
+nuget FSharp.Core 
 
 # The build.fsx script uses this
 nuget FAKE 4.64.13
@@ -42,7 +40,6 @@ nuget XPlot.GoogleCharts.Deedle 1.5.0
 # nuget Deedle.RPlugin 1.2.5
 
 
-source https://api.nuget.org/v3/index.json
 nuget FsLab 1.1.6
 nuget FSharp.Literate.Scripts 1.1.6
 nuget Argu

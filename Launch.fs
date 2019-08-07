@@ -3,6 +3,8 @@
 // All work is deleagetd to "build.fsx" FAKE script - we just run it using cmd/bash.
 // --------------------------------------------------------------------------------------
 open System
+open System.IO
+open System.Runtime
 open System.Diagnostics
 
 let scriptDir = __SOURCE_DIRECTORY__

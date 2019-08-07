@@ -71,7 +71,7 @@ Some references for tools
 
 ## [Dotnet CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/?tabs=netcore2x)
 
-- sometime vs run into build issues, and the cli provides a more consistent experience. To restore, build, test, publish etc. Paket is integrated smoothly, but you might need to run paket install before building the 1st time. 
+- sometime vs run into build issues, and the cli provides a more consistent experience. To restore, build, test, publish etc. Paket is integrated smoothly, but you might need to run paket install before building the 1st time.
 
 ```console
 dotnet restore
@@ -86,7 +86,6 @@ dotnet publish
 
 - add user path entry and remove duplicates
   adapted from [this post](https://itluke.online/2018/07/16/how-to-remove-duplicates-from-your-path-environment-variable-with-powershell/)
-
 
   ```console
   $CurrentPath = [Environment]::GetEnvironmentVariable('Path','User')
