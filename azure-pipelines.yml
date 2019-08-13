@@ -27,6 +27,8 @@ stages:
         - task: CmdLine@2
           inputs:
             script: |
+              git config --global user.email "guoxiaoq@gmail.com"
+              git config --global user.name "Xiaoqiang Guo"
               git add -A
               git commit -m "update"
               git push origin
