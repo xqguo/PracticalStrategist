@@ -35,4 +35,5 @@ stages:
           deploy:
             steps:
             - download: current
-              artifact: drop              
+              artifact: drop         
+            - script: publish.bat    
