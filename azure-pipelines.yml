@@ -22,9 +22,10 @@ stages:
           inputs:
             SourceFolder: '$(Build.SourceFolder)/output'
             Contents: '**'
-            TargetFolder: '$(Agent.BuildDirectory)/xqguo.github.io'
+            TargetFolder: '$(Build.SourceFolder)/xqguo.github.io'
             OverWrite: true
         - task: CmdLine@2
           inputs:
             script: 'publish.bat'
-            workingDirectory: '$(Agent.BuildDirectory)/xqguo.github.io'
+            workingDirectory: '$(Build.SourceFolder)/xqguo.github.io'
+
