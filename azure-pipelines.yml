@@ -26,6 +26,10 @@ stages:
             OverWrite: true
         - task: CmdLine@2
           inputs:
-            script: 'publish.bat'
+            script: |
+              git add -A
+              git commit -m "update"
+              git push origin
             workingDirectory: '$(Build.SourcesDirectory)/xqguo.github.io'
+
 
