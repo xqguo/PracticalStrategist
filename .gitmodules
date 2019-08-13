@@ -1,0 +1,3 @@
+[submodule "xqguo.github.io"]
+	path = xqguo.github.io
+	url = git@github.com:xqguo/xqguo.github.io.git

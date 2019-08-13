@@ -1,4 +1,6 @@
 @echo off
+git config --global user.email "guoxiaoq@gmail.com"
+git config --global user.name "Xiaoqiang Guo"
 ECHO GIT STATUS
 git status
 ECHO GIT STATUS
