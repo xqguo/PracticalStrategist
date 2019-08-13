@@ -16,8 +16,17 @@ stages:
         pool:
           vmImage: $(vmImageName)
         steps:
+        - checkout: self
+          submodules: true
         - script: build.cmd html 
-        - script: git clone https://github.com/xqguo/xqguo.github.io
+        - task: CmdLine@2
+          inputs:
+            script: |
+              git config --global user.email "guoxiaoq@gmail.com"
+              git config --global user.name "Xiaoqiang Guo"
+              git status
+              git checkout master
+            workingDirectory: '$(Build.SourcesDirectory)/xqguo.github.io'        
         - task: CopyFiles@2
           inputs:
             SourceFolder: '$(Build.SourcesDirectory)/output'
@@ -27,11 +36,9 @@ stages:
         - task: CmdLine@2
           inputs:
             script: |
-              git config --global user.email "guoxiaoq@gmail.com"
-              git config --global user.name "Xiaoqiang Guo"
               git add -A
               git commit -m "update"
-              git push origin
+              git push git@github.com:xqguo/xqguo.github.io.git
             workingDirectory: '$(Build.SourcesDirectory)/xqguo.github.io'
 
 
