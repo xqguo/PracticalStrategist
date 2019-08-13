@@ -20,12 +20,12 @@ stages:
         - script: git clone https://github.com/xqguo/xqguo.github.io
         - task: CopyFiles@2
           inputs:
-            SourceFolder: '$(Build.SourceFolder)/output'
+            SourceFolder: '$(Build.SourcesDirectory)/output'
             Contents: '**'
-            TargetFolder: '$(Build.SourceFolder)/xqguo.github.io'
+            TargetFolder: '$(Build.SourcesDirectory)/xqguo.github.io'
             OverWrite: true
         - task: CmdLine@2
           inputs:
             script: 'publish.bat'
-            workingDirectory: '$(Build.SourceFolder)/xqguo.github.io'
+            workingDirectory: '$(Build.SourcesDirectory)/xqguo.github.io'
 
