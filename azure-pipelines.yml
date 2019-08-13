@@ -20,7 +20,7 @@ stages:
         - script: git clone https://github.com/xqguo/xqguo.github.io
         - task: CopyFiles@2
           inputs:
-            SourceFolder: '$(Agent.BuildDirectory)/output'
+            SourceFolder: '$(Build.SourceFolder)/output'
             Contents: '**'
             TargetFolder: '$(Agent.BuildDirectory)/xqguo.github.io'
             OverWrite: true
