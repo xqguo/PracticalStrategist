@@ -17,9 +17,7 @@ stages:
           vmImage: $(vmImageName)
         steps:
         - script: build.cmd html 
-        - publish:  $(Agent.BuildDirectory)/output/publish
-          artifact: drop
-        
+        - publish:  $(Agent.BuildDirectory)/output/publish        
   - stage: Deploy
     displayName: Deployment stage
     dependsOn: Build
@@ -34,6 +32,12 @@ stages:
         runOnce:
           deploy:
             steps:
-            - download: current
-              artifact: drop         
-            - script: publish.bat    
+            - script: git clone https://github.com/xqguo/xqguo.github.io
+            - task: DownloadPipelineArtifact@2
+              inputs:
+                artifact: 'drop'
+                path: $(Build.SourcesDirectory)/xqguo.github.io                     
+            - task: CmdLine@2
+              inputs:
+                script: 'publish.bat'
+                workingDirectory: '$(Build.SourcesDirectory)/xqguo.github.io'
