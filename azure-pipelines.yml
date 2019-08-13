@@ -27,4 +27,4 @@ stages:
         - task: CmdLine@2
           inputs:
             script: 'publish.bat'
-            workingDirectory: '$(Build.SourcesDirectory)/xqguo.github.io'
+            workingDirectory: '$(Agent.BuildDirectory)/xqguo.github.io'
