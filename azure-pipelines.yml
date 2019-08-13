@@ -1,0 +1,38 @@
+trigger:
+- master
+
+variables:
+  buildPlatform: 'x64'
+  buildConfiguration: 'Release'
+  vmImageName: 'windows-2019'
+
+stages:
+  - stage: Build
+
+    displayName: Build stage
+    jobs:
+      - job: Build
+        displayName: Build
+        pool:
+          vmImage: $(vmImageName)
+        steps:
+        - script: build.cmd html 
+        - publish: output/publish
+          artifact: drop
+        
+  - stage: Deploy
+    displayName: Deployment stage
+    dependsOn: Build
+    condition: succeeded('Build')
+    jobs:
+    - deployment: Dev
+      displayName: Dev
+      environment: 'development'
+      pool: 
+        vmImage: $(vmImageName)
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+            - download: current
+              artifact: drop              
