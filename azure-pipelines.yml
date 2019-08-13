@@ -17,7 +17,7 @@ stages:
           vmImage: $(vmImageName)
         steps:
         - script: build.cmd html 
-        - publish: output/publish
+        - publish:  $(Agent.BuildDirectory)/output/publish
           artifact: drop
         
   - stage: Deploy
