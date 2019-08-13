@@ -16,6 +16,8 @@ stages:
         pool:
           vmImage: $(vmImageName)
         steps:
+        - checkout: self
+          submodules: true
         - script: build.cmd html 
         - task: CmdLine@2
           inputs:
