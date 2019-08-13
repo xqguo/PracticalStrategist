@@ -17,7 +17,7 @@ stages:
           vmImage: $(vmImageName)
         steps:
         - script: build.cmd html 
-        - script: git clone https://github.com/xqguo/
+        - script: git clone https://github.com/xqguo/xqguo.github.io
         - task: CopyFiles@2
           inputs:
             SourceFolder: '$(Agent.BuildDirectory)/output'
