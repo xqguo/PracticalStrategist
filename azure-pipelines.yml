@@ -29,6 +29,7 @@ stages:
             script: |
               git config --global user.email "guoxiaoq@gmail.com"
               git config --global user.name "Xiaoqiang Guo"
+              git status
               git add -A
               git commit -m "update"
               git push git@github.com:xqguo/xqguo.github.io.git
