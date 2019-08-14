@@ -18,6 +18,8 @@ stages:
         steps:
         - checkout: self
           submodules: false
+          persistCredentials: true        
+          clean: true  
         - task: CmdLine@2
           inputs:
             script: |
@@ -38,7 +40,7 @@ stages:
             script: |
               git add -A
               git commit -m "update"
-              git push 
+              git push orign
             workingDirectory: '$(Build.SourcesDirectory)'
 
 
