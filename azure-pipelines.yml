@@ -39,6 +39,6 @@ stages:
               git add -A
               git commit -m "update"
               git push git@github.com:xqguo/xqguo.github.io.git
-            workingDirectory: '$(Build.SourcesDirectory)/xqguo.github.io'
+            workingDirectory: '$(Build.SourcesDirectory)'
 
 
