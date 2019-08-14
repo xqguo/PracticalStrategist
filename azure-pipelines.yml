@@ -40,7 +40,7 @@ stages:
             script: |
               git add -A
               git commit -m "update"
-              git push orign
+              git push origin master
             workingDirectory: '$(Build.SourcesDirectory)'
 
 
