@@ -17,7 +17,7 @@ stages:
           vmImage: $(vmImageName)
         steps:
         - checkout: self
-          submodules: true
+          submodules: false
         - script: build.cmd html 
         - task: CmdLine@2
           inputs:
@@ -26,19 +26,19 @@ stages:
               git config --global user.name "Xiaoqiang Guo"
               git status
               git checkout master
-            workingDirectory: '$(Build.SourcesDirectory)/xqguo.github.io'        
+            workingDirectory: '$(Build.SourcesDirectory)'        
         - task: CopyFiles@2
           inputs:
             SourceFolder: '$(Build.SourcesDirectory)/output'
             Contents: '**'
-            TargetFolder: '$(Build.SourcesDirectory)/xqguo.github.io'
+            TargetFolder: '$(Build.SourcesDirectory)'
             OverWrite: true
         - task: CmdLine@2
           inputs:
             script: |
               git add -A
               git commit -m "update"
-              git push git@github.com:xqguo/xqguo.github.io.git
+              git push 
             workingDirectory: '$(Build.SourcesDirectory)'
 
 
