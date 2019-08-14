@@ -18,7 +18,6 @@ stages:
         steps:
         - checkout: self
           submodules: false
-        - script: build.cmd html 
         - task: CmdLine@2
           inputs:
             script: |
@@ -26,7 +25,8 @@ stages:
               git config --global user.name "Xiaoqiang Guo"
               git status
               git checkout master
-            workingDirectory: '$(Build.SourcesDirectory)'        
+            workingDirectory: '$(Build.SourcesDirectory)'    
+        - script: build.cmd html                 
         - task: CopyFiles@2
           inputs:
             SourceFolder: '$(Build.SourcesDirectory)/output'
